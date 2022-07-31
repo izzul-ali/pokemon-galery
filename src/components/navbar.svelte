@@ -28,7 +28,7 @@
 
 	{#if open}
 		<div
-			class="mt-4 text-xs shadow-lg shadow-gray-500 sm:hidden left-1/2 w-full -translate-x-1/2 top-10 py-4 absolute text-center bg-purple-50 text-gray-700"
+			class="mt-4 text-xs drop-shadow-lg sm:hidden left-1/2 w-full -translate-x-1/2 top-10 py-4 absolute text-center bg-purple-50 text-gray-700"
 		>
 			<ul class="space-y-3">
 				<li>
