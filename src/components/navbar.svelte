@@ -1,6 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
-
+	import { fade, slide } from 'svelte/transition'
 	let open = false;
 </script>
 
@@ -28,8 +28,9 @@
 
 	{#if open}
 		<div
-			class="mt-4 text-xs drop-shadow-lg sm:hidden left-1/2 w-full -translate-x-1/2 top-10 py-4 absolute text-center bg-purple-50 text-gray-700"
-		>
+			transition:slide={{duration: 200}}
+			class="mt-4 text-xs drop-shadow-lg  sm:hidden left-1/2 w-full -translate-x-1/2 top-10 py-4 absolute text-center bg-purple-50 text-gray-700"
+			>
 			<ul class="space-y-3">
 				<li>
 					<div
@@ -37,7 +38,7 @@
 							open = false;
 							goto('/');
 						}}
-						class="cursor-pointer hover:text-purple-700"
+						class="cursor-pointer hover:text-purple-700 text-sm"
 					>
 						Home
 					</div>
@@ -48,7 +49,7 @@
 							open = false;
 							goto('/');
 						}}
-						class="cursor-pointer hover:text-purple-700"
+						class="cursor-pointer hover:text-purple-700 text-sm"
 					>
 						About
 					</div>
@@ -59,7 +60,7 @@
 							open = false;
 							goto('/');
 						}}
-						class="cursor-pointer hover:text-purple-700"
+						class="cursor-pointer hover:text-purple-700 text-sm"
 					>
 						Contact
 					</div>
